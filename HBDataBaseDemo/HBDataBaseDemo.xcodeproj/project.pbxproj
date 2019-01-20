@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7ABDF8048E6133F254F2EEA0 /* libPods-HBDataBaseDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 476BEC4530A181FF6EFAE2A6 /* libPods-HBDataBaseDemo.a */; };
+		7D153D4E21F0C365002882C5 /* HBDao.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D153D4D21F0C365002882C5 /* HBDao.m */; };
 		7D71910521ECD26F003BF379 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71910421ECD26F003BF379 /* AppDelegate.m */; };
 		7D71910821ECD26F003BF379 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D71910721ECD26F003BF379 /* ViewController.m */; };
 		7D71910B21ECD270003BF379 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D71910921ECD26F003BF379 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 		0082F0F0B23F6B0CBB8FB0A1 /* Pods-HBDataBaseDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBDataBaseDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HBDataBaseDemo/Pods-HBDataBaseDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		45E8EA54DA417F513A9A71D2 /* Pods-HBDataBaseDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HBDataBaseDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HBDataBaseDemo/Pods-HBDataBaseDemo.release.xcconfig"; sourceTree = "<group>"; };
 		476BEC4530A181FF6EFAE2A6 /* libPods-HBDataBaseDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HBDataBaseDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D153D4C21F0C365002882C5 /* HBDao.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HBDao.h; sourceTree = "<group>"; };
+		7D153D4D21F0C365002882C5 /* HBDao.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HBDao.m; sourceTree = "<group>"; };
 		7D71910021ECD26F003BF379 /* HBDataBaseDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HBDataBaseDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D71910321ECD26F003BF379 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7D71910421ECD26F003BF379 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 			children = (
 				7D71911A21ECD926003BF379 /* HBDataBaseHelper.h */,
 				7D71911B21ECD926003BF379 /* HBDataBaseHelper.m */,
+				7D153D4C21F0C365002882C5 /* HBDao.h */,
+				7D153D4D21F0C365002882C5 /* HBDao.m */,
 			);
 			path = HBDataBase;
 			sourceTree = "<group>";
@@ -201,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D71911C21ECD926003BF379 /* HBDataBaseHelper.m in Sources */,
+				7D153D4E21F0C365002882C5 /* HBDao.m in Sources */,
 				7D71910821ECD26F003BF379 /* ViewController.m in Sources */,
 				7D71911321ECD273003BF379 /* main.m in Sources */,
 				7D71910521ECD26F003BF379 /* AppDelegate.m in Sources */,
