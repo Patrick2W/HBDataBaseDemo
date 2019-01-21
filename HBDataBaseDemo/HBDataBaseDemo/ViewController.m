@@ -16,7 +16,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.title = @"数据库操作";
+}
+
+#pragma mark - action
+
+- (IBAction)inser:(id)sender {
+    
+}
+
+- (IBAction)remove:(id)sender {
+    
+}
+
+- (IBAction)update:(id)sender {
+    
+}
+
+- (IBAction)query:(id)sender {
+    
 }
 
 

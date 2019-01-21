@@ -16,7 +16,7 @@
     return [self insert:obj error:nil];
 }
 
-- (NSUInteger)insert:(NSDictionary *)obj error:( NSString * _Nullable *_Nullable)error {
+- (NSUInteger)insert:(NSDictionary *)obj error:(NSError **)error {
     
     __block NSInteger lastInsertRowId = 0;
     
@@ -32,9 +32,11 @@
     NSString *sql = FMDB_SF(@"INSERT INFO [%@] ([%@]) VALUES (:%@)", self.TBName, keyStr, valueStr);
     BOOL ret = [db executeUpdate:sql withParameterDictionary:obj];
     if ([db hadError]) {
-        if (error) {
-            *error = [db lastErrorMessage];
+        /*
+        if (temp != NULL) {
+            *temp = [db lastError];
         }
+         */
     }
     if (ret) lastInsertRowId = [db lastInsertRowId];
     

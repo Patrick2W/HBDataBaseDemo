@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (NSUInteger)insert:(NSDictionary *)obj;
-- (NSUInteger)insert:(NSDictionary *)obj error:( NSString * _Nullable *_Nullable)error;
+- (NSUInteger)insert:(NSDictionary *)obj error:(NSError **)error;
 
 
 - (double)sum:(NSString *)field;
