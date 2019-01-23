@@ -45,7 +45,49 @@
     return lastInsertRowId;
 }
 
+- (NSInteger)remove:(NSDictionary *)obj {
+    
+    if (obj.count < 1) return 0;
+    __block NSInteger removeCount = 0;
+    FMDB_DATABASE_START
+    
+    NSMutableString *sql = [NSMutableString stringWithFormat:@"DELETE FROM [%@] WHERE ", self.TBName];
+    NSArray *keys = obj.allKeys;
+    NSUInteger count = keys.count;
+    NSUInteger idx = 0;
+    for (NSString *key in keys) {
+        
+        [sql appendString:@"["];
+        [sql appendString:key];
+        [sql appendString:@"]=:"];
+        [sql appendString:key];
+        if (count > idx + 1) {
+            [sql appendString:@" AND "];
+        }
+        idx ++;
+    }
+    BOOL ret = 0;
+    ret = [db executeUpdate:sql withParameterDictionary:obj];
+    if ([db hadError]) {
+        
+    }
+    if (ret) {
+        removeCount = (NSInteger)[db changes];
+    }
+    
+    FMDB_DATABASE_END
+    return removeCount;
+}
 
+- (NSInteger)update:(NSDictionary *)obj {
+    
+    return 0;
+}
+
+- (NSInteger)update:(NSDictionary *)obj conditions:(NSDictionary *)conditions {
+    
+    return 0;
+}
 
 - (double)sum:(NSString *)field {
     

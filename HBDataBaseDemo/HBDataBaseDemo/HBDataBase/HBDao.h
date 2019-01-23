@@ -32,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (NSUInteger)insert:(NSDictionary *)obj;
 - (NSUInteger)insert:(NSDictionary *)obj error:(NSError **)error;
 
+- (NSInteger)remove:(NSDictionary *)obj;
+- (NSInteger)update:(NSDictionary *)obj conditions:(NSDictionary *)conditions;
 
 - (double)sum:(NSString *)field;
 - (double)sum:(NSString *)field condition:(NSString *)condition;
